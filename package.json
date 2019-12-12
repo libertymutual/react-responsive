@@ -1,0 +1,78 @@
+{
+  "name": "react-responsive",
+  "version": "1.0.0",
+  "description": "A set of components and utilities for working with responsive thresholds.",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rimraf dist && NODE_ENV=production babel --config-file=./babel.config.js src -d dist",
+    "lint": "eslint --config .eslintrc --ext .jsx --ext .js .",
+    "lint:fix": "eslint --config .eslintrc --ext .jsx --ext .js . --fix",
+    "test": "jest --config=./jest.config.js",
+    "snyk-test": "snyk test --file=package.json --severity-threshold=high --org=liberty-mutual"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/libertymutual/react-responsive"
+  },
+  "keywords": [
+    "react",
+    "responsive",
+    "props",
+    "threshold",
+    "hide",
+    "show",
+    "responsive props"
+  ],
+  "author": "Charlie Crosby",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@babel/cli": "~7.7.5",
+    "@babel/core": "~7.7.5",
+    "@babel/plugin-proposal-class-properties": "~7.7.4",
+    "@babel/plugin-transform-runtime": "~7.7.6",
+    "@babel/preset-env": "~7.7.6",
+    "@babel/preset-react": "~7.7.4",
+    "@babel/register": "~7.7.4",
+    "@babel/runtime": "~7.7.6",
+    "@testing-library/jest-dom": "~4.2.4",
+    "@testing-library/react": "~9.3.3",
+    "babel-eslint": "~10.0.2",
+    "babel-jest": "~24.9.0",
+    "babel-loader": "~8.0.6",
+    "babel-plugin-transform-react-remove-prop-types": "~0.4.24",
+    "babel-plugin-transform-rename-import": "~2.3.0",
+    "babel-preset-env": "~1.7.0",
+    "babel-preset-minify": "~0.5.1",
+    "core-js": "~3.5.0",
+    "eslint": "~6.7.2",
+    "eslint-config-airbnb": "~18.0.1",
+    "eslint-config-prettier": "6.7.0",
+    "eslint-import-resolver-alias": "~1.1.2",
+    "eslint-plugin-import": "~2.19.1",
+    "eslint-plugin-jsx-a11y": "~6.2.3",
+    "eslint-plugin-prettier": "~3.1.0",
+    "eslint-plugin-react": "~7.17.0",
+    "eslint-plugin-react-hooks": "~2.3.0",
+    "identity-obj-proxy": "~3.0.0",
+    "jest": "~24.9.0",
+    "jest-environment-jsdom": "^24.9.0",
+    "jest-environment-jsdom-global": "~1.2.0",
+    "prettier": "~1.19.1",
+    "prettier-eslint": "~9.0.1",
+    "prettier-eslint-cli": "~5.0.0",
+    "react": "~16.12.0",
+    "react-dom": "~16.12.0",
+    "rimraf": "~3.0.0",
+    "snyk": "~1.259.0",
+    "uuid": "~3.3.2"
+  },
+  "peerDependencies": {
+    "prop-types": "~15.7.2",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  }
+}
