@@ -6114,7 +6114,10 @@ react-is@^16.8.1, react-is@^16.8.4:
 
 react-responsive@libertymutual/react-responsive:
   version "1.0.2"
-  resolved "https://codeload.github.com/libertymutual/react-responsive/tar.gz/8cb6ab4091b9ccfbf974238ca80f10d672a9bbdd"
+  resolved "https://codeload.github.com/libertymutual/react-responsive/tar.gz/27682456e7ecd20a415f11427542b02ba8f9ee3b"
+  dependencies:
+    react-responsive libertymutual/react-responsive
+    travis "^0.1.1"
 
 react@~16.12.0:
   version "16.12.0"

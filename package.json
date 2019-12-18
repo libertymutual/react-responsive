@@ -1,7 +1,7 @@
 {
-  "name": "react-responsive",
+  "name": "@libertymutual/react-responsive",
   "version": "1.0.2",
-  "description": "A set of components and utilities for working with responsive thresholds.",
+  "description": "A set of components and utilities for working with responsive thresholds and responsive props.",
   "sideEffects": false,
   "files": [
     "dist"
@@ -81,9 +81,5 @@
     "prop-types": "~15.7.2",
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
-  },
-  "dependencies": {
-    "react-responsive": "libertymutual/react-responsive",
-    "travis": "^0.1.1"
   }
 }
