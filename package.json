@@ -14,6 +14,10 @@
     "test": "jest --config=./jest.config.js",
     "snyk-test": "snyk test --file=package.json --severity-threshold=high --org=liberty-mutual"
   },
+    "engines": {
+    "yarn": "^1.17.3",
+    "node": ">=10.15.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/libertymutual/react-responsive"
