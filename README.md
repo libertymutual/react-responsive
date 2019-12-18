@@ -1,5 +1,7 @@
 # react-responsive
 
+[![Build Status](https://travis-ci.com/libertymutual/react-responsive.svg?branch=master)](https://travis-ci.com/libertymutual/react-responsive)
+
 `npm install react-responsive`
 
 `yarn add react-responsive`
