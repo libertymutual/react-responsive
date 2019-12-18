@@ -18,9 +18,6 @@
     "yarn": "^1.15.x",
     "node": ">=10.15.0"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/libertymutual/react-responsive"
