@@ -15,7 +15,7 @@
     "snyk-test": "snyk test --file=package.json --severity-threshold=high --org=liberty-mutual"
   },
     "engines": {
-    "yarn": "^1.17.3",
+    "yarn": "^1.15.x",
     "node": ">=10.15.0"
   },
   "repository": {
