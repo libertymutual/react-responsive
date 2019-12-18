@@ -1,10 +1,10 @@
-# react-responsive
+# libertymutual/react-responsive
 
 [![Build Status](https://travis-ci.com/libertymutual/react-responsive.svg?branch=master)](https://travis-ci.com/libertymutual/react-responsive)
 
-`npm install react-responsive`
+`npm install libertymutual/react-responsive`
 
-`yarn add react-responsive`
+`yarn add libertymutual/react-responsive`
 
 This library provides a set of components and hooks that are responsive based on the defined thresholds. This library relies on react [hooks](https://reactjs.org/docs/hooks-overview.html) which require a React version of at least ^16.8.0.  With these components you can get the current threshold, create responsive props, or hide / show content.
 
@@ -12,7 +12,7 @@ The most valuable functionality provided by this library is the ability to make 
 
 ## <ResponsiveProvider \/>
 
-`import { ResponsiveProvider } from 'react-responsive'`
+`import { ResponsiveProvider } from 'libertymutual/react-responsive'`
 
 The **<ResponsiveProvider \/>** component is an optional component if you wish to change any of the defaults. The default `thresholdMap` is `{ xs: 0, sm: 480, md: 768, lg: 960, xl: 1280 }`. This can be changed by passing a new object to the `thresholdMap` prop. There are no restrictions to the number of thresholds you can have or what they need to be named. The keys you specify here are the values the other components will use. Based on the default the keys are 'xs', 'sm', 'md', 'lg', 'xl'.
 
@@ -26,7 +26,7 @@ With the above configuration the keys used by the other components would be 'sma
 
 ## useThreshold()
 
-`import { useThreshold } from 'react-responsive'`
+`import { useThreshold } from 'libertymutual/react-responsive'`
 
 The React [hook](https://reactjs.org/docs/hooks-overview.html) returns the current threshold value from the thresholds you have provided to the **<ResponsiveProvider \/>**. Based on what we passed to the above example this hook would return 'small-phone', 'big-phone', 'tablet', or 'largest'. This hook is stateful and will trigger a re-render if the threshold changes.
 
@@ -34,7 +34,7 @@ The React [hook](https://reactjs.org/docs/hooks-overview.html) returns the curre
 
 ## <WithThreshold \/>
 
-`import { WithThreshold } from 'react-responsive'`
+`import { WithThreshold } from 'libertymutual/react-responsive'`
 
 **<WithThreshold \/>** is the [higher order component](https://reactjs.org/docs/higher-order-components.html) version of the **useThreshold()** [hook](https://reactjs.org/docs/hooks-overview.html). It sets the value of the current threshold on a prop named `threshold`. This component is stateful and will trigger a re-render if the threshold changes.
 
@@ -42,9 +42,9 @@ The React [hook](https://reactjs.org/docs/hooks-overview.html) returns the curre
 
 ## <Hide \/> and <Show \/>
 
-`import { Hide } from 'react-responsive'`
+`import { Hide } from 'libertymutual/react-responsive'`
 
-`import { Show } from 'react-responsive'`
+`import { Show } from 'libertymutual/react-responsive'`
 
 **<Hide \/>** and **<Show \/>** are utility components that conditionally render their content based on the values you provide to the `thresholds` prop. You can provide a single value or an array of values.
 
@@ -56,7 +56,7 @@ Based on what we passed to the above provider component example the following wo
 
 ## <WithResponsiveProps \/>
 
-`import { WithResponsiveProps } from 'react-responsive'`
+`import { WithResponsiveProps } from 'libertymutual/react-responsive'`
 
 **<WithResponsiveProps \/>** is a [higher order component](https://reactjs.org/docs/higher-order-components.html) that lets you turn any prop into a responsive prop. When a prop is responsive it goes from `size="small"` to **_also_** being able to accept an object value like `size={{'small-phone': 'xsmall', 'tablet': 'large'}}`. The value for the size prop will be determined based on the current threshold. This component is stateful and will trigger a re-render if the threshold changes.
 
@@ -79,7 +79,7 @@ import {
   responsivePropBuilder,
   ResponsiveContext,
   useThreshold
-} from 'react-responsive';
+} from 'libertymutual/react-responsive';
 
 export const YourComponent = props => {
     const responsiveContext = useContext(ResponsiveContext);
