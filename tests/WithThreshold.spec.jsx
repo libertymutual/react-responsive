@@ -68,7 +68,10 @@ describe('WithThreshold', () => {
 
     act(() => fireResizeEvent(breakpoints.xs));
 
-    const thresholdUpdated = getByTestId(container, 'testId').innerHTML;
-    expect(thresholdUpdated).not.toEqual(thresholdRendered);
+    // make sure the check doesn't happen before the re-render
+    setTimeout(() => {
+      const thresholdUpdated = getByTestId(container, 'testId').innerHTML;
+      expect(thresholdUpdated).not.toEqual(thresholdRendered);
+    }, 10);
   });
 });
