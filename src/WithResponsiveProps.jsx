@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import PropTypes from 'prop-types';
 import responsivePropBuilder from './responsivePropBuilder';
 import ResponsiveContext from './ResponsiveContext';
 import useThreshold from './useThreshold';
@@ -14,8 +13,6 @@ import defaultThresholdMap from './defaultThresholdMap';
 
 const WithResponsiveProps = configuration => WrappedComponent => {
   const component = props => {
-    const { children } = props;
-
     const threshold = useThreshold();
 
     const responsiveContext = useContext(ResponsiveContext);
@@ -25,16 +22,7 @@ const WithResponsiveProps = configuration => WrappedComponent => {
     const overrideProps = responsivePropBuilder(threshold, props, configuration, thresholdMap);
 
     // spread the current props, then spread the override props and it they will replace the initial value
-    return (
-      <WrappedComponent {...props} {...overrideProps}>
-        {children}
-      </WrappedComponent>
-    );
-  };
-
-  component.propTypes = {
-    /**  @ignore */
-    children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired
+    return <WrappedComponent {...props} {...overrideProps} />;
   };
 
   return component;
