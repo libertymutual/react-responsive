@@ -1,6 +1,6 @@
 {
   "name": "@libertymutual/react-responsive",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A set of components and utilities for working with responsive thresholds and responsive props.",
   "sideEffects": false,
   "files": [
@@ -15,8 +15,8 @@
     "snyk-test": "snyk test --file=package.json --severity-threshold=high --org=liberty-mutual"
   },
   "engines": {
-    "yarn": "^1.15.x",
-    "node": ">=10.15.0"
+    "yarn": ">=1.15.x",
+    "node": "10.x"
   },
   "repository": {
     "type": "git",
