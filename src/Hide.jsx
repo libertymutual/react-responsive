@@ -15,8 +15,7 @@ Hide.propTypes = {
   /**  @ignore */
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
   /** A single value or an array of values to hide this containers content */
-  thresholds: PropTypes.oneOfType([PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl']), PropTypes.arrayOf(PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl']))])
-    .isRequired
+  thresholds: PropTypes.oneOfType([PropTypes.string, PropTypes.array]).isRequired
 };
 
 export default Hide;
