@@ -1,8 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
-import { render, cleanup, getByText, getByTestId } from '@testing-library/react';
-import { act } from 'react-dom/test-utils';
+import { render, cleanup, getByText, getByTestId, act } from '@testing-library/react';
 import WithThreshold from '../src/WithThreshold';
 import fireResizeEvent from './utilities/fireResizeEvent';
 

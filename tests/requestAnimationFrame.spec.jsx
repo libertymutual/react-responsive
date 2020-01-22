@@ -1,6 +1,5 @@
 import React from 'react';
-import { render, cleanup, getByTestId } from '@testing-library/react';
-import { act } from 'react-dom/test-utils';
+import { render, cleanup, getByTestId, act } from '@testing-library/react';
 import { useThreshold, WithThreshold } from '../src';
 import fireResizeEvent from './utilities/fireResizeEvent';
 

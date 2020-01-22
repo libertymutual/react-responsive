@@ -1,8 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
-import { act } from 'react-dom/test-utils';
+import { render, cleanup, act } from '@testing-library/react';
 import uuidv4 from 'uuid/v4';
 import { WithResponsiveProps, ResponsiveProvider } from '../src';
 import fireResizeEvent from './utilities/fireResizeEvent';
