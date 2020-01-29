@@ -1,6 +1,6 @@
 {
   "name": "@libertymutual/react-responsive",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A set of components and utilities for working with responsive thresholds and responsive props.",
   "sideEffects": false,
   "files": [

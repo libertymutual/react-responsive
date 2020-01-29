@@ -7,12 +7,13 @@ module.exports = {
         useBuiltIns: 'usage',
         corejs: { version: 3, proposals: true },
         targets: {
-          browsers: ['> 1%', 'last 5 versions', 'firefox >= 39', 'ie >= 10', 'chrome >= 37', 'safari >= 9', 'edge >= 14']
+          browsers: ['> 1%', 'last 5 versions', 'firefox >= 39', 'ie >= 11', 'chrome >= 37', 'safari >= 9', 'edge >= 14']
         }
       }
     ],
     '@babel/preset-react'
   ],
+  comments: false,
   env: {
     production: {
       presets: [['@babel/preset-env', { modules: false }], 'minify'],
