@@ -12,7 +12,7 @@ import defaultThresholdMap from './defaultThresholdMap';
 // }
 
 const WithResponsiveProps = configuration => WrappedComponent => {
-  const component = props => {
+  const Component = props => {
     const threshold = useThreshold();
 
     const responsiveContext = useContext(ResponsiveContext);
@@ -25,7 +25,7 @@ const WithResponsiveProps = configuration => WrappedComponent => {
     return <WrappedComponent {...props} {...overrideProps} />;
   };
 
-  return component;
+  return Component;
 };
 
 export default WithResponsiveProps;
