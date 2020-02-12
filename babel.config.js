@@ -16,7 +16,7 @@ module.exports = {
   comments: false,
   env: {
     production: {
-      presets: [['@babel/preset-env', { modules: false }], 'minify'],
+      presets: [['@babel/preset-env', { modules: 'commonjs' }], 'minify'],
       plugins: ['babel-plugin-transform-react-remove-prop-types']
     }
   }
