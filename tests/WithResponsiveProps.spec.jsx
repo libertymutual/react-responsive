@@ -2,7 +2,7 @@
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import { render, cleanup, act } from '@testing-library/react';
-import uuidv4 from 'uuid/v4';
+import { v4 as uuidv4 } from 'uuid';
 import { WithResponsiveProps, ResponsiveProvider } from '../src';
 import fireResizeEvent from './utilities/fireResizeEvent';
 
