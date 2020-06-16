@@ -11,6 +11,7 @@ interface WithThresholdProps {
 function withThreshold<P extends WithThresholdProps>(Component: React.ComponentType<P>) {
   return class extends React.Component<P, { threshold: Threshold }> {
     static contextType = ResponsiveContext;
+    static displayName = Component.displayName || `WithThreshold${Component.name}`;
 
     private map: ThresholdMap = defaultThresholdMap;
     private timeout = 0;
