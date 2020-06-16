@@ -11,7 +11,8 @@ module.exports = {
         }
       }
     ],
-    '@babel/preset-react'
+    '@babel/preset-react',
+    '@babel/typescript',
   ],
   comments: false,
   env: {
