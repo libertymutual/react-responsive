@@ -12,7 +12,7 @@ function withThreshold<P extends WithThresholdProps>(Component: React.ComponentT
   return class extends React.Component<P, { threshold: Threshold }> {
     static contextType = ResponsiveContext;
 
-    map = {};
+    private map: ThresholdMap = defaultThresholdMap;
     timeout = 0;
 
     constructor(props: P) {
