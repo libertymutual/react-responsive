@@ -1,21 +1,27 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import useThreshold from './useThreshold';
+import { Threshold } from './ThresholdMap';
 
-export const Show = props => {
+interface HideThresholdProps {
+  thresholds?: Array<Threshold>;
+  children: React.ReactNode;
+}
+
+export const Hide = (props: HideThresholdProps) => {
   const { children, thresholds } = props;
   const breakpoints = Array.isArray(thresholds) ? thresholds : [thresholds];
   const threshold = useThreshold();
-  const show = () => breakpoints.includes(threshold);
+  const show = () => !breakpoints.includes(threshold);
 
   return show() ? <Fragment>{children}</Fragment> : null;
 };
 
-Show.propTypes = {
+Hide.propTypes = {
   /**  @ignore */
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
-  /** A single value or an array of values to show this containers content */
-  thresholds: PropTypes.oneOfType([PropTypes.string, PropTypes.array]).isRequired
+  /** A single value or an array of values to hide this containers content */
+  thresholds: PropTypes.oneOfType([PropTypes.string, PropTypes.array]).isRequired,
 };
 
-export default Show;
+export default Hide;

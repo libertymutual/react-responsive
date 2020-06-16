@@ -3,12 +3,12 @@ import defaultThresholdMap from './defaultThresholdMap';
 
 const getCurrentValue = (value: any) => (value !== undefined ? value : null);
 
-export interface ResponsivePropsConfig {
-  propKeys: Array<string>;
-}
-
 export interface GenericProps {
   [key: string]: any;
+}
+
+export interface ResponsivePropsConfig {
+  propKeys: Array<string>;
 }
 
 const responsivePropBuilder = (currentThreshold: Threshold, props: GenericProps, configuration: ResponsivePropsConfig, thresholdMap = defaultThresholdMap) => {

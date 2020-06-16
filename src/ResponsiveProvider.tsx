@@ -2,9 +2,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ResponsiveContext from './ResponsiveContext';
+import { ThresholdMap } from './ThresholdMap';
 import defaultThresholdMap from './defaultThresholdMap';
 
-export const ResponsiveProvider = props => {
+interface WithThresholdProps {
+  thresholdMap?: ThresholdMap;
+  children: React.ReactNode;
+}
+
+export const ResponsiveProvider = (props: WithThresholdProps) => {
   const { thresholdMap, children } = props;
 
   const getThresholdMap = () => {
@@ -17,11 +23,11 @@ ResponsiveProvider.propTypes = {
   /** The names and values of the responsive breakpoints */
   thresholdMap: PropTypes.object,
   /**  @ignore */
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
 };
 
 ResponsiveProvider.defaultProps = {
-  thresholdMap: defaultThresholdMap
+  thresholdMap: defaultThresholdMap,
 };
 
 export default ResponsiveProvider;
