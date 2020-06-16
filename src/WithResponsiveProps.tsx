@@ -11,8 +11,8 @@ import defaultThresholdMap from './defaultThresholdMap';
 //   propKeys: [ 'size' ],
 // }
 
-const WithResponsiveProps = configuration => WrappedComponent => {
-  const Component = props => {
+const WithResponsiveProps = (configuration) => (WrappedComponent) => {
+  const Component = (props) => {
     const threshold = useThreshold();
 
     const responsiveContext = useContext(ResponsiveContext);

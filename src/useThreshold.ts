@@ -1,10 +1,11 @@
 /* eslint-disable import/no-named-as-default */
 import { useState, useEffect, useContext } from 'react';
 import getThreshold from './getThreshold';
+import { ThresholdMap } from './ThresholdMap';
 import ResponsiveContext from './ResponsiveContext';
 import defaultThresholdMap from './defaultThresholdMap';
 
-const getCurrentThreshold = map => getThreshold(window.innerWidth, map);
+const getCurrentThreshold = (map: ThresholdMap) => getThreshold(window.innerWidth, map);
 
 function useThreshold() {
   const responsiveContext = useContext(ResponsiveContext);

@@ -1,4 +1,6 @@
-const defaultThresholdMap = () => {
+import { ThresholdMap } from './ThresholdMap';
+
+const defaultThresholdMap = (): ThresholdMap => {
   return {
     xs: 0,
     sm: 480,

@@ -1,17 +1,21 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import getThreshold from './getThreshold';
+import { Threshold } from './ThresholdMap';
 import ResponsiveContext from './ResponsiveContext';
 import defaultThresholdMap from './defaultThresholdMap';
 
-const withThreshold = () => Component => {
-  class WithThreshold extends React.Component {
-    map;
+interface WithThresholdProps {
+  threshold?: Threshold;
+}
 
+function withThreshold<P extends WithThresholdProps>(Component: React.ComponentType<P>) {
+  return class extends React.Component<P, { threshold: Threshold }> {
+    static contextType = ResponsiveContext;
+
+    map = {};
     timeout = 0;
 
-    constructor(props) {
+    constructor(props: P) {
       super(props);
 
       this.state = {
@@ -63,10 +67,8 @@ const withThreshold = () => Component => {
 
       return <Component {...more} />;
     }
-  }
-  WithThreshold.contextType = ResponsiveContext;
+  };
+}
 
-  return WithThreshold;
-};
-
-export default withThreshold;
+const WithThreshold = () => withThreshold;
+export default WithThreshold;

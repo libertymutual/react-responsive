@@ -1,8 +1,17 @@
+import { Threshold } from './ThresholdMap';
 import defaultThresholdMap from './defaultThresholdMap';
 
-const getCurrentValue = value => (value !== undefined ? value : null);
+const getCurrentValue = (value: any) => (value !== undefined ? value : null);
 
-const responsivePropBuilder = (currentThreshold, props, configuration, thresholdMap = defaultThresholdMap) => {
+export interface ResponsivePropsConfig {
+  propKeys: Array<string>;
+}
+
+export interface GenericProps {
+  [key: string]: any;
+}
+
+const responsivePropBuilder = (currentThreshold: Threshold, props: GenericProps, configuration: ResponsivePropsConfig, thresholdMap = defaultThresholdMap) => {
   // get the keys from the map, e.g. ['xs', 'sm', 'md', 'lg', 'xl']
   const thresholdKeys = Object.keys(thresholdMap);
 
@@ -16,10 +25,10 @@ const responsivePropBuilder = (currentThreshold, props, configuration, threshold
 
   // only an object can contain responsive values, null is an object also but that's not valid
   // e.g. size={{xs: 'h4', md: 'h3'}}
-  const propKeys = configuration.propKeys.filter(propKey => typeof props[propKey] === 'object' && props[propKey] !== null);
+  const propKeys = configuration.propKeys.filter((propKey: string) => typeof props[propKey] === 'object' && props[propKey] !== null);
 
   // loop through the props that have been found as being responsive and extract an object of name/value pairs
-  const translatedValues = propKeys.reduce((acc, propKey) => {
+  const translatedValues = propKeys.reduce((acc: any, propKey: string) => {
     let result = null;
     // find the first threshold with a value. That is our value because we reversed them above starting at the current threshold and moving to smaller thresholds
     for (let i = 0; i < thresholds.length; i++) {
