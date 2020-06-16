@@ -1,5 +1,7 @@
-const getThreshold = (width = 0, breakpoints = { xs: 0 }) => {
-  const breakpointKeys = Object.keys(breakpoints);
+import { Threshold, ThresholdMap } from './ThresholdMap';
+
+const getThreshold = (width: number = 0, breakpoints: ThresholdMap = { xs: 0 }) => {
+  const breakpointKeys = Object.keys(breakpoints) as Array<Threshold>;
 
   let result = breakpointKeys[0];
 
