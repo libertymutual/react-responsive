@@ -7,7 +7,12 @@
     "prettier",
     "prettier/react"
   ],
-  "plugins": ["react", "react-hooks", "prettier", "jsx-a11y"],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "prettier",
+    "jsx-a11y"
+  ],
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": {
@@ -28,8 +33,13 @@
     "react/prop-types": "error",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "react/jsx-props-no-spreading": [0],
-    "react/jsx-fragments": [0],
+    "import/extensions": "off",
+    "react/jsx-props-no-spreading": [
+      0
+    ],
+    "react/jsx-fragments": [
+      0
+    ],
     "prettier/prettier": [
       "error",
       {
@@ -39,9 +49,15 @@
         "tabWidth": 2
       }
     ],
-    "no-plusplus": ["off"],
-    "import/prefer-default-export": ["off"],
-    "import/no-named-as-default": ["off"],
+    "no-plusplus": [
+      "off"
+    ],
+    "import/prefer-default-export": [
+      "off"
+    ],
+    "import/no-named-as-default": [
+      "off"
+    ],
     "import/no-extraneous-dependencies": [
       "error",
       {
@@ -58,6 +74,16 @@
   "settings": {
     "react": {
       "version": "^16.9.0"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
     }
   }
 }
