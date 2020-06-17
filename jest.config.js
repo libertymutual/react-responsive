@@ -17,11 +17,11 @@ module.exports = {
 
   setupFiles: [require.resolve('core-js')],
 
-  moduleFileExtensions: ['jsx', 'js'],
+  moduleFileExtensions: ['ts', 'tsx', 'jsx', 'js'],
 
-  collectCoverageFrom: ['<rootDir>/src/**/*.{js,jsx}'],
+  collectCoverageFrom: ['<rootDir>/src/**/*.{js,jsx,ts,tsx}'],
 
-  coveragePathIgnorePatterns: ['index.js'],
+  coveragePathIgnorePatterns: ['index.js', 'ThresholdMap.ts'],
 
   collectCoverage: true,
   coverageDirectory: './coverage',
@@ -30,19 +30,19 @@ module.exports = {
       branches: 90,
       function: 100,
       lines: 100,
-      statements: 100
-    }
+      statements: 100,
+    },
   },
 
   // A map from regular expressions to paths to transformers
   transform: {
-    '^.+\\.(js|jsx)$': require.resolve('./test-harness/preprocessor'),
-    '^(?!.*\\.(js|jsx|css|json)$)': require.resolve('./test-harness/fileTransform')
+    '^.+\\.(ts|tsx|js|jsx)$': require.resolve('./test-harness/preprocessor'),
+    '^(?!.*\\.(ts|tsx|js|jsx|css|json)$)': require.resolve('./test-harness/fileTransform'),
   },
 
   verbose: true,
   testURL: 'http://localhost',
 
   // The test environment that will be used for testing
-  testEnvironment: 'jest-environment-jsdom-global'
+  testEnvironment: 'jest-environment-jsdom-global',
 };
