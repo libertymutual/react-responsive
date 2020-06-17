@@ -1,6 +1,6 @@
 import React from 'react';
 import getThreshold from './getThreshold';
-import { Threshold } from './ThresholdMap';
+import { Threshold, ThresholdMap } from './ThresholdMap';
 import ResponsiveContext from './ResponsiveContext';
 import defaultThresholdMap from './defaultThresholdMap';
 
@@ -13,8 +13,8 @@ function withThreshold<P extends WithThresholdProps>(Component: React.ComponentT
     static contextType = ResponsiveContext;
     static displayName = Component.displayName || `WithThreshold${Component.name}`;
 
-    private map: ThresholdMap = defaultThresholdMap;
-    private timeout = 0;
+    map: ThresholdMap = defaultThresholdMap;
+    timeout = 0;
 
     constructor(props: P) {
       super(props);

@@ -1,5 +1,5 @@
 // simulate window resize
-const fireResizeEvent = width => {
+const fireResizeEvent = (width) => {
   window.innerWidth = width;
   window.dispatchEvent(new Event('resize'));
 };
