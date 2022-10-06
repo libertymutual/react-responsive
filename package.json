@@ -67,7 +67,7 @@
     "react": "~17.0.1",
     "react-dom": "~17.0.1",
     "rimraf": "~3.0.2",
-    "snyk": "~1.460.0",
+    "snyk": "~1.996.0",
     "uuid": "~8.3.2"
   },
   "peerDependencies": {
